@@ -1,0 +1,60 @@
+.question {
+    text-align: center;
+    padding: 20px;
+    background-color: #f8f9fa; /* צבע רקע בהיר לאיזור השאלות */
+    border-radius: 10px; /* רדיוס פינות לרקע */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* הצללה קלה */
+  }
+  
+  h2 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #333; /* צבע כהה לכתוביות */
+  }
+  
+  .options {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .option-button {
+    background-color: #ffffff; /* צבע רקע לכפתורים */
+    border: 2px solid #007bff; /* גבול כחול */
+    border-radius: 5px;
+    color: #333; /* צבע טקסט כהה */
+    padding: 15px;
+    margin: 5px;
+    width: 80%;
+    max-width: 300px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  .option-button:hover {
+    background-color: #007bff; /* צבע רקע על ריחוף */
+    color: #ffffff; /* צבע טקסט לבן על ריחוף */
+    border-color: #007bff; /* גבול כחול כהה על ריחוף */
+  }
+  
+  .option-button.selected {
+    background-color: #d0e0f0; /* צבע רקע נבחר */
+  }
+  
+  .option-button.correct {
+    background-color: #d0f0d0; /* צבע רקע נכון */
+  }
+  
+  .option-button.incorrect {
+    background-color: #f0d0d0; /* צבע רקע לא נכון */
+  }
+  
+  .feedback {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333; /* צבע טקסט כהה */
+  }
+  
