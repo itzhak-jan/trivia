@@ -41,7 +41,7 @@ const App: React.FC = () => {
       {!gradeGroup && (
         <div>
           <h1>ברוכים הבאים למשחק הטריוויה!</h1>
-          <button onClick={() => setGradeGroup('1-3')}>כיתות א'-ג'</button>
+          <button onClick={() => setGradeGroup('1-3')}>כיתות א-ג</button>
           <button onClick={() => setGradeGroup('4-6')}>כיתות ד-ו</button>
         </div>
       )}
