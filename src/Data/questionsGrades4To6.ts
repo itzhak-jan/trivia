@@ -1,6 +1,5 @@
 import Question from "../Model/Question";
 
-
 const questionsGrades4To6: Question[] = [
     {
         question: "מהם שלושת הדברים שעליהם העולם עומד?",
