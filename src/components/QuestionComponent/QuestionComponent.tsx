@@ -17,9 +17,9 @@ const QuestionComponent: React.FC<QuestionProps> = ({ question, onAnswer }) => {
   const [feedback, setFeedback] = useState<string>('');
 
   const handleOptionClick = (option: string) => {
-    if (selectedOption === null) {
+    if (selectedOption == null) {
       setSelectedOption(option);
-      const isCorrect = option === question.correctAnswer;
+      const isCorrect = option == question.correctAnswer;
       setFeedback(isCorrect ? 'נכון!' : `לא נכון. ${question.explanation}`);
       setShowFeedback(true);
       setTimeout(() => {
@@ -32,14 +32,14 @@ const QuestionComponent: React.FC<QuestionProps> = ({ question, onAnswer }) => {
   };
 
   return (
-    <div className="question">
+    <div className= "question">
       <h2>{question.question}</h2>
-      <div className="options">
+      <div className= "options">
         {question.options.map((option, index) => (
           <button
             key={index}
             onClick={() => handleOptionClick(option)}
-            className={`option-button ${selectedOption === option ? 'selected' : ''} ${showFeedback ? (option === question.correctAnswer ? 'correct' : 'incorrect') : ''}`}
+            className={`option-button ${selectedOption == option ? 'selected' : ''} ${showFeedback ? (option == question.correctAnswer ? 'correct' : 'incorrect') : ''}`}
             disabled={showFeedback} // מנע לחיצות נוספות בזמן ש-feedback מוצג
           >
             {option}
