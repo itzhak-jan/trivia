@@ -49,7 +49,7 @@ const App: React.FC = () => {
         <QuestionComponent
           question={questions[currentQuestionIndex]}
           onAnswer={handleAnswer}
-          index={currentQuestionIndex}
+          index={currentQuestionIndex+1}
         />
       )}
       {showResult && (
