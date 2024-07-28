@@ -50,7 +50,8 @@ const QuestionComponent: React.FC<QuestionProps> = ({ question, onAnswer }) => {
       {showFeedback && (
         <div className="feedback">
           {feedback}
-          <button onClick={handleNextQuestion} className="option-button selected">
+          <br></br>
+          <button onClick={handleNextQuestion} className="option-button  correct">
             לשאלה הבאה
           </button>
         </div>
