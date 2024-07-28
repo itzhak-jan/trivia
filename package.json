@@ -23,7 +23,7 @@
   },
   "eslintConfig": {
     "extends": [
-      "react-app",
+      "trivia",
       "react-app/jest"
     ]
   },
