@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+//import  currentQuestionIndex from '../../App';
+import questionsGrades4To6 from '../../Data/questionsGrades4To6'
 import './QuestionComponent.css'; // ייבא את קובץ ה-CSS החדש
 
 interface QuestionProps {
@@ -9,9 +11,10 @@ interface QuestionProps {
     explanation: string;
   };
   onAnswer: (isCorrect: boolean) => void;
+  index: Number;
 }
 
-const QuestionComponent: React.FC<QuestionProps> = ({ question, onAnswer }) => {
+const QuestionComponent: React.FC<QuestionProps> = ({ question, onAnswer, index }) => {
   const [selectedOption, setSelectedOption] = useState<string | null>(null);
   const [showFeedback, setShowFeedback] = useState<boolean>(false);
   const [feedback, setFeedback] = useState<string>('');
@@ -34,6 +37,7 @@ const QuestionComponent: React.FC<QuestionProps> = ({ question, onAnswer }) => {
 
   return (
     <div className="question">
+      <p>שאלה {index.toString()} מתוך {questionsGrades4To6.length}</p>
       <h2>{question.question}</h2>
       <div className="options">
         {question.options.map((option, index) => (
