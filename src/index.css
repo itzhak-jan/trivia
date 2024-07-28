@@ -16,5 +16,6 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0; /* מסיר מרווחים חיצוניים של הדף */
+  margin: 0; 
+  background-color: #f0f0f0; 
 }
