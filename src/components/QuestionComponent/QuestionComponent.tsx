@@ -22,19 +22,20 @@ const QuestionComponent: React.FC<QuestionProps> = ({ question, onAnswer }) => {
       const isCorrect = option == question.correctAnswer;
       setFeedback(isCorrect ? 'נכון!' : `לא נכון. ${question.explanation}`);
       setShowFeedback(true);
-      setTimeout(() => {
-        setShowFeedback(false);
-        onAnswer(isCorrect);
-        setSelectedOption(null);
-        setFeedback('');
-      }, 2000); // נותן חיווי למשך 2 שניות
     }
   };
 
+  const handleNextQuestion = () => {
+    setShowFeedback(false);
+    onAnswer(selectedOption == question.correctAnswer);
+    setSelectedOption(null);
+    setFeedback('');
+  };
+
   return (
-    <div className= "question">
+    <div className="question">
       <h2>{question.question}</h2>
-      <div className= "options">
+      <div className="options">
         {question.options.map((option, index) => (
           <button
             key={index}
@@ -49,6 +50,9 @@ const QuestionComponent: React.FC<QuestionProps> = ({ question, onAnswer }) => {
       {showFeedback && (
         <div className="feedback">
           {feedback}
+          <button onClick={handleNextQuestion} className="next-question-button">
+            לשאלה הבאה
+          </button>
         </div>
       )}
     </div>
